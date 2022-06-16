@@ -14,7 +14,8 @@ body {
 main {
     margin: 0 auto;
     width: 75%;
-    height: 100vh;
+    /* height: 100vh; */
+    padding: 100px 0;
     display: flex;
     align-items: center;
 }
@@ -127,7 +128,28 @@ input:focus {
     font-weight: 700;
 }
 
-@media only screen and (max-width: 375px) {
+
+/* The following media queries makes the design entirely responsive */
+@media only screen and (max-width: 1190px) {
+    main {
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 870px) {
+    .form {
+        padding: 30px;
+    }
+}
+
+@media only screen and (max-width: 744px) {
+    .submit-btn {
+        padding: 15px 15px;
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
     main {
         flex-direction: column;
         height: auto;
@@ -156,6 +178,11 @@ input:focus {
     }
 
     .form {
-        padding: 25px;
+        padding: 30px;
+    }
+
+    .submit-btn {
+        padding: 15px 20px;
+        font-size: 16px;
     }
 }
