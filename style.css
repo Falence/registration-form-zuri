@@ -69,6 +69,8 @@ input {
     margin-bottom: 20px;
 }
 
+
+
 input:focus {
     outline: none;
     border: 1px solid hsl(249, 10%, 26%);
@@ -80,7 +82,7 @@ input:focus {
 
 .warning {
     position: absolute;
-    top: 16px;
+    top: 11px;
     right: 30px;
     width: 30px;
     height: 30px;
@@ -114,6 +116,22 @@ input:focus {
     border: none;
     outline: none;
 }
+
+/* TODO: fix this.  */
+input:invalid:focus {
+    outline: 1px solid hsl(0, 100%, 74%);
+    border: hidden;
+}
+
+input:invalid:focus + .warning {
+    opacity: 1;
+    visibility: visible;
+}
+/* 
+input[type="submit"]:active + input[type="text"]:invalid:focus > .warning {
+    opacity: 1;
+    visibility: visible;
+} */
 
 
 
