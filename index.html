@@ -19,27 +19,37 @@
         </div>
         <div class="form-box">
             <div class="try-free-box"><span>Try it free for 7 days</span> then $20/mo, thereafter</div>
-            <form action="" class="form">
+            <form action="" class="form" id="form">
                 <div class="form__group">
-                    <input type="text" placeholder="First Name" required >
-                    <span class="warning">!</span>
+                    <input type="text" placeholder="First Name" id="firstname">
+                    <img src="./images/icon-error.svg" alt="icon-error" class="icon icon-error"/>
+                    <img src="./images/circle-check-solid.svg" alt="icon-success" class="icon icon-success"/>
+                    <small class="error-message"></small>
                 </div>
                 <div class="form__group">
-                    <input type="text" placeholder="Last Name" required>
-                    <span class="warning">!</span>
+                    <input type="text" placeholder="Last Name" id="lastname">
+                    <img src="./images/icon-error.svg" alt="icon-error" class="icon icon-error"/>
+                    <img src="./images/circle-check-solid.svg" alt="icon-success" class="icon icon-success"/>
+                    <small class="error-message"></small>
                 </div>
                 <div class="form__group">
-                    <input type="email" placeholder="Email Address" required>
-                    <span class="warning">!</span>
+                    <input type="email" placeholder="Email Address" id="email">
+                    <img src="./images/icon-error.svg" alt="icon-error" class="icon icon-error"/>
+                    <img src="./images/circle-check-solid.svg" alt="icon-success" class="icon icon-success"/>
+                    <small class="error-message"></small>
                 </div>
                 <div class="form__group">
-                    <input type="password" placeholder="Password" required minlength="8">
-                    <span class="warning">!</span>
+                    <input type="password" placeholder="Password" id="password">
+                    <img src="./images/icon-error.svg" alt="icon-error" class="icon icon-error"/>
+                    <img src="./images/circle-check-solid.svg" alt="icon-success" class="icon icon-success"/>
+                    <small class="error-message"></small>
                 </div>
-                <input class="submit-btn" type="submit" value="CLAIM YOUR FREE TRIAL">
+                <!-- <input class="submit-btn" type="submit" value="CLAIM YOUR FREE TRIAL"> -->
+                <button class="submit-btn">CLAIM YOUR FREE TRIAL</button>
                 <p class="form__terms">By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
             </form>
         </div>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>

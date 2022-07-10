@@ -57,7 +57,6 @@ h1 {
 }
 
 input {
-    
     width: 100%;
     padding: 15px 30px;
     font-family: 'Poppins', sans-serif;
@@ -69,8 +68,6 @@ input {
     margin-bottom: 20px;
 }
 
-
-
 input:focus {
     outline: none;
     border: 1px solid hsl(249, 10%, 26%);
@@ -78,27 +75,62 @@ input:focus {
 
 .form__group {
     position: relative;
+    position: relative;
+    text-align: right;
+    margin-bottom: 0.7rem;
 }
 
-.warning {
+.form__group.success input {
+    border: 2px solid hsl(154, 59%, 51%);
+}
+  
+.form__group.error input {
+    border: 2px solid hsl(0, 100%, 74%);
+    color: hsl(0, 100%, 74%);
+}
+
+
+.form__group.success .icon-success {
+    visibility: visible;
+    filter: invert(100%) sepia(24%) saturate(6385%) hue-rotate(73deg) brightness(87%) contrast(81%);
+}
+  
+.form__group.error .icon-error {
+    visibility: visible;
+}
+
+.form .icon {
+    width: 24px;
+    height: 24px;
+    visibility: hidden;
     position: absolute;
-    top: 11px;
-    right: 30px;
-    width: 30px;
-    height: 30px;
-    font-size: 20px;
-    display: inline-block;
-    background-color: hsl(0, 100%, 74%);
-    text-align: center;
-    border-radius: 50%;
-    opacity: 0;
-    visibility: none;
+    top: 13px;
+    right: 10px;
 }
 
+.form__group.error .error-message {
+    visibility: visible;
+}
 
-
+.form .error-message {
+    visibility: hidden;
+  
+    color: hsl(0, 100%, 74%);
+    font-size: 0.6rem;
+    font-weight: 700;
+    font-style: italic;
+}
 
 .submit-btn {
+    width: 100%;
+    padding: 15px 30px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: hsl(249, 10%, 26%);
+    border: 1px solid hsl(246, 25%, 77%);
+    border-radius: 5px;
+    margin-bottom: 20px;
     background-color: hsl(154, 59%, 51%);
     color: white;
     font-weight: 500;
@@ -116,23 +148,6 @@ input:focus {
     border: none;
     outline: none;
 }
-
-/* TODO: fix this.  */
-input:invalid:focus {
-    outline: 1px solid hsl(0, 100%, 74%);
-    border: hidden;
-}
-
-input:invalid:focus + .warning {
-    opacity: 1;
-    visibility: visible;
-}
-/* 
-input[type="submit"]:active + input[type="text"]:invalid:focus > .warning {
-    opacity: 1;
-    visibility: visible;
-} */
-
 
 
 .form__terms {
