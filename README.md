@@ -1,2 +1,2 @@
 # 
-[Live Link](https://falence.github.io/registration-form-zuri/)
+[Live Link](https://falence.github.io/zuri-registration-form/)
