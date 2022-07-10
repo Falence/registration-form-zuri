@@ -6,52 +6,52 @@ const password = document.getElementById('password');
 
 function addErrorClass(element, errorMessage) {
   const formGroup = element.parentElement;
-  const small = formGroup.querySelector('small')
-  small.innerText = errorMessage
-  formGroup.className = 'form__group error'
+  const small = formGroup.querySelector('small');
+  small.innerText = errorMessage;
+  formGroup.className = 'form__group error';
 }
 
 function addSuccessClass(element) {
   const formGroup = element.parentElement;
-  formGroup.className = 'form__group success'
+  formGroup.className = 'form__group success';
 }
 
 function verifyEmail(element, message) {
   const formGroup = element.parentElement;
-  const small = formGroup.querySelector('small')
-  small.innerText = message
-  formGroup.className = 'form__group error'
+  const small = formGroup.querySelector('small');
+  small.innerText = message;
+  formGroup.className = 'form__group error';
 }
 
-form.addEventListener('submit', (e) => {
-	e.preventDefault()
-	validateForm()
+form.addEventListener('submit', (event) => {
+	event.preventDefault();
+	validateForm();
 })
 
-
 const validateForm = () => {
-	const fnameValue = firstname.value.trim()
-	const lnameValue = lastname.value.trim()
-	const emailValue = email.value.trim()
-	const passwordValue = password.value.trim()
+	const fnameValue = firstname.value.trim();
+	const lnameValue = lastname.value.trim();
+	const emailValue = email.value.trim();
+	const passwordValue = password.value.trim();
 	const emailAtSymbol = '@';
+	const fullStopSymbol = '.';
 
 	if (fnameValue === "") {
-		addErrorClass(firstname, 'First Name cannot be empty')
+		addErrorClass(firstname, 'First Name cannot be empty');
 	} else {
-		addSuccessClass(firstname)
+		addSuccessClass(firstname);
 	}
 
 	if (lnameValue === "") {
-		addErrorClass(lastname, 'last Name cannot be empty')
+		addErrorClass(lastname, 'last Name cannot be empty');
 	} else {
-		addSuccessClass(lastname)
+		addSuccessClass(lastname);
 	}
 
 	if (emailValue === "") {
 		addErrorClass(email, 'email cannot be empty')
-	} else if (!emailValue.includes(emailAtSymbol)) {
-		verifyEmail(email, 'looks like this is not an email')
+	} else if (!emailValue.includes(emailAtSymbol) || !emailValue.includes(fullStopSymbol)) {
+		verifyEmail(email, 'looks like this is not an email');
 	} else {
 		addSuccessClass(email)
 	}

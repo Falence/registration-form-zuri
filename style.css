@@ -90,10 +90,10 @@ input:focus {
 }
 
 
-.form__group.success .icon-success {
+/* .form__group.success .icon-success {
     visibility: visible;
     filter: invert(100%) sepia(24%) saturate(6385%) hue-rotate(73deg) brightness(87%) contrast(81%);
-}
+} */
   
 .form__group.error .icon-error {
     visibility: visible;
